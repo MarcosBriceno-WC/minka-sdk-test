@@ -1,4 +1,4 @@
-import { LedgerSdk } from '@minka/ledger-sdk';
+
 import sdk from "./initialize"
 
 type AnchorRecord = {
