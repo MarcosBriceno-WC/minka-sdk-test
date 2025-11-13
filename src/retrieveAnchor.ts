@@ -1,5 +1,5 @@
 
-import sdk from "./initialize"
+import { sdk , myKeyPair} from "./initialize.js"
 
 type AnchorRecord = {
         hash: string;

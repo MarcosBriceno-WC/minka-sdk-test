@@ -1,13 +1,13 @@
 import { LedgerSdk } from '@minka/ledger-sdk';
 
 
-const keyPair = {
+export const myKeyPair = {
     format: 'ed25519-raw',
     public: 'OOKjXsnfj0yRBQHlSodIoVT4FaClNFDu9FKNJQ8oVCk=',
     secret: 'wwtGwFB+FSwh9LVWPSjKPobG03uZJ3/KR12PWvk4sQs=',
 } as const;
 
-const sdk = new LedgerSdk({
+export const sdk = new LedgerSdk({
     ledger: 'writechoice-laas',
     server: 'https://writechoice-laas.ldg-stg.one/api/v2',
     secure: {
@@ -15,6 +15,6 @@ const sdk = new LedgerSdk({
         sub: 'signer:marcos@writechoice.io',       // e.g., 'signer:my-app'
         aud: 'writechoice-laas',     // The ledger handle or public key
         exp: 3600,                     // Token expiration in seconds (e.g., 1 hour)
-        keyPair: keyPair,     // The key pair from Step 2
+        keyPair: myKeyPair,     // The key pair from Step 2
     },
 });

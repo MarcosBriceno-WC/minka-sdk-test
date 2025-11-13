@@ -1,4 +1,6 @@
 
+import { sdk , myKeyPair}  from "./initialize.js"
+
 type AnchorRecord = {
     data: {
         handle: string;
@@ -34,7 +36,7 @@ async function updateAnchor(aliasHandle: string, newStatus: 'created' | 'blocked
             })
             .hash()
             .sign([{
-                keyPair,
+                keyPair: myKeyPair,
                 custom: {
                     status: newStatus,
                     moment: new Date().toISOString(),
