@@ -1,9 +1,11 @@
 
 import { sdk , myKeyPair}  from "./initialize.js"
 
+const Change = 1
+
 type AnchorRecord = {
     data: {
-        handle: string;
+        handle: boolean;
         wallet: string;
         target: string;
         symbol?: string;
