@@ -1,6 +1,8 @@
 
 import { sdk , myKeyPair}  from "./initialize.js"
 
+const Change =  2
+
 type AnchorRecord = {
     data: {
         handle: string;
